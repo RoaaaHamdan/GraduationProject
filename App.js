@@ -1,0 +1,547 @@
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import Articles from './Screens/Artical'
+import  BaByDrink from './Screens/BabyDrink'
+import chartBabyDrink from './Screens/chartBabyDrink'
+import HomeBaby from './Screens/HomeBaby'
+import GenerateName from './Screens/GenerateBabyName'
+import ToDoList from './Screens/AddBabyEvent'
+import chartBaby from './Screens/chartBabyDrink'
+import showBbayDoctor from './Screens/ShowBbayDoctorList'
+import babyEventCalendr from './Screens/eventsCalender'
+import showMap from './Screens/MapBa'
+import Main from './src/Main'
+import addtoCart from './Screens/addtochart'
+import showProduct from './Screens/showProduct'
+import CalBabyWei from './Screens/calBabyWe'
+import trackWeightSlep from './Screens/trackBaby'
+import chartsBaby from './Screens/babyCharts'
+import GamesHome from './Screens/gamesHome'
+import SnakeGame from './Screens/Snack'
+import cart from './Screens/Cart'
+import music from './Screens/music'
+import information from './Screens/Information'
+import showUserInfo from './Screens/ShowUserInformation'
+import Memorylevel1  from './Screens/memoreLevel1'
+import Memorylevel2  from './Screens/Memorylevel2'
+import Memorylevel3  from './Screens/MemoryLevel3'
+import game3 from './Screens/game3'
+import memGame2 from './Screens/memGame2'
+import ColorsGame from './Screens/ColorsGame'
+import MainUserHome from './Screens/MainUserHome'
+import ShowDoctorList from './Screens/ShowDoctorsList'
+import app4 from './Screens/AppBooking'
+import Calculations from './Screens/Calculations'
+import eyes from './Screens/eyes'
+import calories from './Screens/calories'
+import Sokari from './Screens/sokare'
+import SignInScreen from './Screens/login'
+import SignUpScreen from './Screens/SignUp'
+import doctorProfile from './Screens/DoctorProfile'
+import qusetions from './Screens/questions'
+import addChild from './Screens/addChild'
+import addGlobalEvent from './Screens/AdminEvent'
+import adminMainBage from './Screens/adminMainBage'
+import getAllUsers from './Screens/getAllUsers'
+import Draweradmin from './Screens/drawer'
+import claBMI from './Screens/BMIcal'
+import claWi from './Screens/calWei'
+import showReq from './Screens/ShowReqInf'
+import fitness from './Screens/fitness'
+import SleepingMusic from './Screens/SleepingMusic'
+import rem from './Screens/Remember'
+import EditDocInf from './Screens/EditInformation'
+import DrawerDoctor from './Screens/DrawerDoctor'
+import doctorCalender from './Screens/doctorCaalender'
+import stepCounter from './Screens/stepCounter'
+import chatf from './Screens/chat'
+import reminderWater from './Screens/WaterNot'
+import chatfw from './Screens/PeertoPeerChat'
+import water1 from './Screens/water1'
+import water2 from './Screens/water2'
+import addWater from './Screens/addWater'
+import waterHistory from './Screens/WaterHistory'
+import tip1 from './Screens/tip1'
+import tip2 from './Screens/tip2'
+import tip3 from './Screens/tip3'
+import tip4 from './Screens/tip4'
+import tip5 from './Screens/tip5'
+import qw1 from './Screens/qw1'
+import qw2 from './Screens/qw2'
+import qw3 from './Screens/qw3'
+import qw4 from './Screens/qw4'
+import qw5 from './Screens/qw5'
+import qw6 from './Screens/qw6'
+import video1 from './Screens/video1'
+import video2 from './Screens/video2'
+import video3 from './Screens/video3'
+import video4 from './Screens/video4'
+import ex from './Screens/ex'
+import ex1 from './Screens/ex1'
+import ex2 from './Screens/ex2'
+import ex3 from './Screens/ex3'
+import ex4 from './Screens/ex4'
+import xORo from './Screens/XorO'
+//import Month1 from './components/month1'
+//import Month2 from './components/month2'
+import flayingbird from './Screens/flayingbird'
+import AddAdmin from './Screens/addAdmin'
+import contactList from './Screens/ContactList'
+import addPre from './Screens/addPre'
+import contactListDoctor from './Screens/ContactListDoctor'
+import mainfood from './Screens/mainfood';
+import meat from './Screens/meat';
+import burger from './Screens/burger';
+import fish from './Screens/fish';
+import fruits from './Screens/fruits';
+import nuts from './Screens/nuts';
+import veg from './Screens/veg';
+import forgotPass from './Screens/forgotPasswod'
+import ChangePass from './Screens/ChangePass'
+import  Memeory2 from './Screens/mem'
+import month11 from './Screens/m1-3'
+import month21 from './Screens/m4-6'
+import month31 from './Screens/m6-9'
+import month41 from './Screens/m10-1'
+import Pr1 from './Screens/preg1';
+import Pr2 from './Screens/preg2';
+import Pr3 from './Screens/preg3';
+import m1 from './Screens/month1';
+import m2 from './Screens/month2';
+import m3 from './Screens/month3';
+import m4 from './Screens/month4';
+import m5 from './Screens/month5';
+import m6 from './Screens/month6';
+import m7 from './Screens/month7';
+import m8 from './Screens/month8';
+import m9 from './Screens/month9';
+import b1 from './Screens/baby1';
+import b2 from './Screens/baby2';
+import b3 from './Screens/baby3';
+import b4 from './Screens/baby4';
+import b5 from './Screens/baby5';
+import b6 from './Screens/baby6';
+import b7 from './Screens/baby7';
+import b8 from './Screens/baby8';
+import b9 from './Screens/baby9';
+import mm1 from './Screens/mother1';
+import mm2 from './Screens/mother2';
+import mm3 from './Screens/mother3';
+import mm4 from './Screens/mother4';
+import mm5 from './Screens/mother5';
+import mm6 from './Screens/mother6';
+import mm7 from './Screens/mother7';
+import mm8 from './Screens/mother8';
+import mm9 from './Screens/mother9';
+import c1 from './Screens/check1';
+import c2 from './Screens/check2';
+import c3 from './Screens/check3';
+import c4 from './Screens/check4';
+import c5 from './Screens/check5';
+import c6 from './Screens/check6';
+import c7 from './Screens/check7';
+import c8 from './Screens/check8';
+import c9 from './Screens/check9';
+import v from './Screens/visit';
+import c11 from './Screens/check11';
+import c12 from './Screens/check12';
+import c13 from './Screens/check13';
+import c21 from './Screens/check21';
+import c22 from './Screens/check22';
+import c31 from './Screens/check31';
+import c32 from './Screens/check32';
+import c33 from './Screens/check33';
+import c41 from './Screens/check41';
+import c42 from './Screens/check42';
+import c51 from './Screens/check51';
+import c52 from './Screens/check52';
+import c61 from './Screens/check61';
+import c71 from './Screens/check71';
+import c72 from './Screens/check72';
+import c81 from './Screens/check81';
+import c91 from './Screens/check91';
+import c92 from './Screens/check92';
+import c93 from './Screens/check93';
+import a from './Screens/ask';
+import q10 from './Screens/q10';
+import q11 from './Screens/q11';
+import q12 from './Screens/q12';
+import q13 from './Screens/q13';
+import q14 from './Screens/q14';
+import q15 from './Screens/q15';
+import q16 from './Screens/q16';
+import q20 from './Screens/q20';
+import q21 from './Screens/q21';
+import q22 from './Screens/q22';
+import q23 from './Screens/q23';
+import q24 from './Screens/q24';
+import q25 from './Screens/q25';
+import q30 from './Screens/q30';
+import q31 from './Screens/q31';
+import q32 from './Screens/q32';
+import q33 from './Screens/q33';
+import q34 from './Screens/q34';
+import q40 from './Screens/q40';
+import q41 from './Screens/q41';
+import q42 from './Screens/q42';
+import q43 from './Screens/q43';
+import q50 from './Screens/q50';
+import q51 from './Screens/q51';
+import q52 from './Screens/q52';
+import q53 from './Screens/q53';
+import q60 from './Screens/q60';
+import q61 from './Screens/q61';
+import q62 from './Screens/q62';
+import q63 from './Screens/q63';
+import q70 from './Screens/q70';
+import q71 from './Screens/q71';
+import q72 from './Screens/q72';
+import q73 from './Screens/q73';
+import name1 from './Screens/name1';
+import name2 from './Screens/name2';
+import name3 from './Screens/name3';
+import name4 from './Screens/name4';
+import name5 from './Screens/name5';
+import name6 from './Screens/name6';
+import name7 from './Screens/name7';
+import name8 from './Screens/name8';
+import name9 from './Screens/name9';
+import nameb40 from './Screens/nameb40';
+import nameb41 from './Screens/nameb41';
+import nameb42 from './Screens/nameb42';
+import nameb43 from './Screens/nameb43';
+import nameb44 from './Screens/nameb44';
+import nameb45 from './Screens/nameb45';
+import nameb46 from './Screens/nameb46';
+import nameb47 from './Screens/nameb47';
+import nameb48 from './Screens/nameb48';
+import nameb49 from './Screens/nameb49';
+import nameb50 from './Screens/nameb50';
+import nameb51 from './Screens/nameb51';
+import nameb52 from './Screens/nameb52';
+import nameb53 from './Screens/nameb53';
+import nameb54 from './Screens/nameb54';
+import nameb55 from './Screens/nameb55';
+import nameg from './Screens/nameg';
+import nameg30 from './Screens/nameg30';
+import nameg31 from './Screens/nameg31';
+import nameg32 from './Screens/nameg32';
+import nameg33 from './Screens/nameg33';
+import nameg34 from './Screens/nameg34';
+import nameg35 from './Screens/nameg35';
+import nameg36 from './Screens/nameg36';
+import nameg40 from './Screens/nameg40';
+import nameg41 from './Screens/nameg41';
+import nameg42 from './Screens/nameg42';
+import nameg43 from './Screens/nameg43';
+import nameg44 from './Screens/nameg44';
+import nameg45 from './Screens/nameg45';
+import nameg46 from './Screens/nameg46';
+import nameg50 from './Screens/nameg50';
+import nameg51 from './Screens/nameg51';
+import nameg52 from './Screens/nameg52';
+import nameg53 from './Screens/nameg53';
+import nameg54 from './Screens/nameg54';
+import nameg55 from './Screens/nameg55';
+import AddP from './Screens/addP'
+import addProd from './Screens/addProudct'
+import Montada from './Screens/Almoltaga'
+import showComments from './Screens/ShowComments'
+import Home from './Screens/Home'
+import DrawerUser from './Screens/UserDrawer'
+import trackPre from './Screens/PregWe'
+import GamesMem from './Screens/Mlevels'
+import GamesRela from './Screens/ReleatedThingsGame'
+import ColorsMem from './Screens/ColorsMem'
+import gameNum from './Screens/gammme'
+import GameScreen from './Screens/index'
+import gameNum3 from './Screens/digitth'
+import gameNum2 from './Screens/digitt'
+import GamesNumbers from './Screens/NumbersGame'
+
+const RootStack = createStackNavigator();
+const App = () => {
+  return (
+    <NavigationContainer>
+      <RootStack.Navigator initialRouteName="Home" headerMode="none">
+      <RootStack.Screen name="GameScreen" component={GameScreen} /> 
+
+
+      <RootStack.Screen name="GamesNumbers" component={GamesNumbers} /> 
+
+      <RootStack.Screen name="ColorsMem" component={ColorsMem} /> 
+
+
+      <RootStack.Screen name="gameNum3" component={gameNum3} /> 
+      <RootStack.Screen name="gameNum2" component={gameNum2} /> 
+      <RootStack.Screen name="gameNum" component={gameNum} /> 
+
+      <RootStack.Screen name="Home" component={Home} /> 
+      <RootStack.Screen name="GamesRela" component={GamesRela} /> 
+
+      <RootStack.Screen name="trackPre" component={trackPre} /> 
+      <RootStack.Screen name="GamesMem" component={GamesMem} /> 
+
+
+      <RootStack.Screen name="addProd" component={addProd} /> 
+      <RootStack.Screen name="AddP" component={AddP} /> 
+
+
+      <RootStack.Screen name="showProduct" component={showProduct} /> 
+
+      <RootStack.Screen name="xORo" component={xORo} /> 
+      <RootStack.Screen name="Memeory" component={Memeory2} /> 
+      <RootStack.Screen name="showComments" component={showComments} /> 
+      <RootStack.Screen name="DrawerUser" component={DrawerUser} /> 
+      <RootStack.Screen name="music" component={music} /> 
+      
+      <RootStack.Screen name="addPre" component={addPre} /> 
+
+      <RootStack.Screen name="Montada" component={Montada} /> 
+      <RootStack.Screen name="month11" component={month11} /> 
+      <RootStack.Screen name="month21" component={month21} /> 
+      <RootStack.Screen name="month31" component={month31} /> 
+      <RootStack.Screen name="month41" component={month41} /> 
+
+      <RootStack.Screen name="veg" component={veg} /> 
+      <RootStack.Screen name="ChangePass" component={ChangePass} /> 
+      <RootStack.Screen name="forgotPass" component={forgotPass} /> 
+      <RootStack.Screen name="AddAdmin" component={AddAdmin} /> 
+      <RootStack.Screen name="contactList" component={contactList} /> 
+      <RootStack.Screen name="contactListDoctor" component={contactListDoctor} /> 
+      <RootStack.Screen name="meat" component={meat} /> 
+      <RootStack.Screen name="mainfood" component={mainfood} /> 
+     <RootStack.Screen name="burger" component={burger} /> 
+     <RootStack.Screen name="fish" component={fish} /> 
+<RootStack.Screen name="fruits" component={fruits} /> 
+<RootStack.Screen name="nuts" component={nuts} /> 
+      <RootStack.Screen name="waterHistory" component={waterHistory} /> 
+      <RootStack.Screen name="reminderWater" component={reminderWater} /> 
+      <RootStack.Screen name="flayingbird" component={flayingbird} /> 
+<RootStack.Screen name="SleepingMusic" component ={SleepingMusic} />
+      <RootStack.Screen name="Main" component={Main} /> 
+      <RootStack.Screen name="tip1" component={tip1} /> 
+      <RootStack.Screen name="tip2" component={tip2} /> 
+      <RootStack.Screen name="tip3" component={tip3} /> 
+      <RootStack.Screen name="tip4" component={tip4} /> 
+      <RootStack.Screen name ="tip5" component={tip5} />
+      <RootStack.Screen name="qw1" component={qw1} /> 
+      <RootStack.Screen name="qw2" component={qw2} /> 
+      <RootStack.Screen name="qw3" component={qw3} /> 
+      <RootStack.Screen name="qw4" component={qw4} /> 
+      <RootStack.Screen name="qw5" component={qw5} /> 
+      <RootStack.Screen name="qw6" component={qw6} /> 
+      <RootStack.Screen name="ex" component={ex} /> 
+      <RootStack.Screen name="ex1" component={ex1} /> 
+      <RootStack.Screen name="ex2" component={ex2} /> 
+      <RootStack.Screen name="ex3" component={ex3} /> 
+      <RootStack.Screen name ="ex4" component={ex4} />
+      <RootStack.Screen name="video1" component={video1} /> 
+      <RootStack.Screen name="video2" component={video2} /> 
+      <RootStack.Screen name="video3" component={video3} /> 
+      <RootStack.Screen name ="video4" component={video4} />
+      <RootStack.Screen name="SignInScreen" component={SignInScreen} /> 
+      <RootStack.Screen name="chatf" component={chatf} /> 
+      <RootStack.Screen name="information" component={information} /> 
+      <RootStack.Screen name="chatfw" component={chatfw} /> 
+      <RootStack.Screen name ="addWater" component={addWater} />
+      <RootStack.Screen name="stepCounter" component={stepCounter} /> 
+      <RootStack.Screen name="showUserInfo" component={showUserInfo} /> 
+      <RootStack.Screen name="SignUpScreen" component={SignUpScreen} /> 
+      <RootStack.Screen name="calWei" component={claWi} /> 
+      <RootStack.Screen name="showReq" component={showReq} /> 
+      <RootStack.Screen name="rem" component={rem} /> 
+      <RootStack.Screen name="EditDocInf" component={EditDocInf} /> 
+      <RootStack.Screen name="doctorCalender" component={doctorCalender} /> 
+      <RootStack.Screen name ='claBMI' component={claBMI} />
+      <RootStack.Screen name ='addGlobalEvent' component={addGlobalEvent} />
+      <RootStack.Screen name ='water1' component={water1} />
+      <RootStack.Screen name ='water2' component={water2} />
+      <RootStack.Screen name ='fitness' component={fitness} />
+      <RootStack.Screen name="getAllUsers" component={getAllUsers} />
+      <RootStack.Screen name="DrawerDoctor" component={DrawerDoctor} />  
+      <RootStack.Screen name="doctorProfile" component={doctorProfile} />  
+      <RootStack.Screen name="addChild" component={addChild} /> 
+      <RootStack.Screen name ="adminMainBage" component={adminMainBage} />
+      <RootStack.Screen name="qusetions" component={qusetions} /> 
+      <RootStack.Screen name="Draweradmin" component={Draweradmin} />
+      <RootStack.Screen name="Calculations" component={Calculations} />
+      <RootStack.Screen name="eyes" component={eyes} />
+      <RootStack.Screen name="calories" component={calories} />
+      <RootStack.Screen name="Sokari" component={Sokari} />
+      <RootStack.Screen name="MainUserHome" component={MainUserHome} />
+      <RootStack.Screen name="ShowDoctorList" component={ShowDoctorList} />
+      <RootStack.Screen name="app4" component={app4} />
+      <RootStack.Screen name="CalBabyWei" component={CalBabyWei} />
+      <RootStack.Screen name="HomeBaby" component={HomeBaby} />
+      <RootStack.Screen name="Memorylevel1" component={ Memorylevel1} />
+      <RootStack.Screen name="ColorsGame" component={ColorsGame} />
+      <RootStack.Screen name="Memorylevel12" component={ Memorylevel2} />
+      <RootStack.Screen name="Memorylevel13" component={ Memorylevel3} />
+      <RootStack.Screen name="GamesHome" component={GamesHome} />
+      <RootStack.Screen name="SnakeGame" component={SnakeGame} />
+      <RootStack.Screen name="chartsBaby" component={chartsBaby} />
+      <RootStack.Screen name="GenerateName" component={GenerateName} />
+      <RootStack.Screen name="ToDoList" component={ToDoList} />
+      <RootStack.Screen name="chartBaby" component={chartBaby} />
+      <RootStack.Screen name="addtoCart" component={addtoCart} />
+      <RootStack.Screen name="cart" component={cart} />
+      <RootStack.Screen name="showBbayDoctor" component={showBbayDoctor} />
+      <RootStack.Screen name="babyEventCalendr" component={babyEventCalendr} />
+      <RootStack.Screen name="showMap" component={showMap} />
+      <RootStack.Screen name="Artical" component={Articles} />
+      <RootStack.Screen name="BabyDrink" component={BaByDrink} />
+      <RootStack.Screen name="chartBabyDrink" component={chartBabyDrink} />
+      <RootStack.Screen name="trackWeightSlep" component={trackWeightSlep} />
+      <RootStack.Screen name="game3" component={game3} />
+      <RootStack.Screen name="memGame2" component={memGame2} />
+
+      <RootStack.Screen name="pregnant1" component={Pr1} />
+         <RootStack.Screen name="pregnant2" component={Pr2} />
+         <RootStack.Screen name="pregnant3" component={Pr3} />
+         <RootStack.Screen name="month1" component={m1} />
+         <RootStack.Screen name="month2" component={m2} />
+         <RootStack.Screen name="month3" component={m3} />
+         <RootStack.Screen name="month4" component={m4} />
+         <RootStack.Screen name="month5" component={m5} />
+         <RootStack.Screen name="month6" component={m6} />
+         <RootStack.Screen name="month7" component={m7} />
+         <RootStack.Screen name="month8" component={m8} />
+         <RootStack.Screen name="month9" component={m9} />
+         <RootStack.Screen name="baby1" component={b1} />
+         <RootStack.Screen name="baby2" component={b2} />
+         <RootStack.Screen name="baby3" component={b3} />
+         <RootStack.Screen name="baby4" component={b4} />
+         <RootStack.Screen name="baby5" component={b5} />
+         <RootStack.Screen name="baby6" component={b6} />
+         <RootStack.Screen name="baby7" component={b7} />
+         <RootStack.Screen name="baby8" component={b8} />
+         <RootStack.Screen name="baby9" component={b9} />
+         <RootStack.Screen name="mother1" component={mm1} />
+         <RootStack.Screen name="mother2" component={mm2} />
+         <RootStack.Screen name="mother3" component={mm3} />
+         <RootStack.Screen name="mother4" component={mm4} />
+         <RootStack.Screen name="mother5" component={mm5} />
+         <RootStack.Screen name="mother6" component={mm6} />
+         <RootStack.Screen name="mother7" component={mm7} />
+         <RootStack.Screen name="mother8" component={mm8} />
+         <RootStack.Screen name="mother9" component={mm9} />
+         <RootStack.Screen name="check1" component={c1} />
+         <RootStack.Screen name="check2" component={c2} />
+         <RootStack.Screen name="check3" component={c3} />
+         <RootStack.Screen name="check4" component={c4} />
+         <RootStack.Screen name="check5" component={c5} />
+         <RootStack.Screen name="check6" component={c6} />
+         <RootStack.Screen name="check7" component={c7} />
+         <RootStack.Screen name="check8" component={c8} />
+         <RootStack.Screen name="check9" component={c9} />
+         <RootStack.Screen name="check11" component={c11} />
+         <RootStack.Screen name="check12" component={c12} />
+         <RootStack.Screen name="check13" component={c13} />
+         <RootStack.Screen name="check21" component={c21} />
+         <RootStack.Screen name="check22" component={c22} />
+         <RootStack.Screen name="check31" component={c31} />
+         <RootStack.Screen name="check32" component={c32} />
+         <RootStack.Screen name="check33" component={c33} />
+         <RootStack.Screen name="check41" component={c41} />
+         <RootStack.Screen name="check42" component={c42} />
+         <RootStack.Screen name="check51" component={c51} />
+         <RootStack.Screen name="check52" component={c52} />
+         <RootStack.Screen name="check61" component={c61} />
+         <RootStack.Screen name="check71" component={c71} />
+         <RootStack.Screen name="check72" component={c72} />
+         <RootStack.Screen name="check81" component={c81} />
+         <RootStack.Screen name="check91" component={c91} />
+         <RootStack.Screen name="check92" component={c92} />
+         <RootStack.Screen name="check93" component={c93} />
+         <RootStack.Screen name="visit" component={v} />
+
+
+         <RootStack.Screen name="ask" component={a} />
+        <RootStack.Screen name="q10" component={q10} />
+         <RootStack.Screen name="q11" component={q11} />
+         <RootStack.Screen name="q12" component={q12} />
+         <RootStack.Screen name="q13" component={q13} />
+         <RootStack.Screen name="q14" component={q14} />
+         <RootStack.Screen name="q15" component={q15} />
+         <RootStack.Screen name="q16" component={q16} />
+         <RootStack.Screen name="q20" component={q20} />
+         <RootStack.Screen name="q21" component={q21} />
+         <RootStack.Screen name="q22" component={q22} />
+         <RootStack.Screen name="q23" component={q23} />
+         <RootStack.Screen name="q24" component={q24} />
+         <RootStack.Screen name="q25" component={q25} />
+         <RootStack.Screen name="q30" component={q30} />
+         <RootStack.Screen name="q31" component={q31} />
+         <RootStack.Screen name="q32" component={q32} />
+         <RootStack.Screen name="q33" component={q33} />
+         <RootStack.Screen name="q34" component={q34} />
+         <RootStack.Screen name="q40" component={q40} />
+         <RootStack.Screen name="q41" component={q41} />
+         <RootStack.Screen name="q42" component={q42} />
+         <RootStack.Screen name="q43" component={q43} />
+         <RootStack.Screen name="q50" component={q50} />
+         <RootStack.Screen name="q51" component={q51} />
+         <RootStack.Screen name="q52" component={q52} />
+         <RootStack.Screen name="q53" component={q53} />
+         <RootStack.Screen name="q60" component={q60} />
+         <RootStack.Screen name="q61" component={q61} />
+         <RootStack.Screen name="q62" component={q62} />
+         <RootStack.Screen name="q63" component={q63} />
+         <RootStack.Screen name="q70" component={q70} />
+         <RootStack.Screen name="q71" component={q71} />
+         <RootStack.Screen name="q72" component={q72} />
+         <RootStack.Screen name="q73" component={q73} />
+
+         <RootStack.Screen name="name1" component={name1} />
+         <RootStack.Screen name="name2" component={name2} />
+         <RootStack.Screen name="name3" component={name3} />
+         <RootStack.Screen name="name4" component={name4} />
+         <RootStack.Screen name="name5" component={name5} />
+         <RootStack.Screen name="name6" component={name6} />
+         <RootStack.Screen name="name7" component={name7} />
+         <RootStack.Screen name="name8" component={name8} />
+         <RootStack.Screen name="name9" component={name9} />
+         <RootStack.Screen name="nameb40" component={nameb40} />
+         <RootStack.Screen name="nameb41" component={nameb41} />
+         <RootStack.Screen name="nameb42" component={nameb42} />
+         <RootStack.Screen name="nameb43" component={nameb43} />
+         <RootStack.Screen name="nameb44" component={nameb44} />
+         <RootStack.Screen name="nameb45" component={nameb45} />
+         <RootStack.Screen name="nameb46" component={nameb46} />
+         <RootStack.Screen name="nameb47" component={nameb47} />
+         <RootStack.Screen name="nameb48" component={nameb48} />
+         <RootStack.Screen name="nameb49" component={nameb49} />
+         <RootStack.Screen name="nameb50" component={nameb50} />
+         <RootStack.Screen name="nameb51" component={nameb51} />
+         <RootStack.Screen name="nameb52" component={nameb52} />
+         <RootStack.Screen name="nameb53" component={nameb53} />
+         <RootStack.Screen name="nameb54" component={nameb54} />
+         <RootStack.Screen name="nameb55" component={nameb55} />
+         <RootStack.Screen name="nameg30" component={nameg30} />
+         <RootStack.Screen name="nameg31" component={nameg31} />
+         <RootStack.Screen name="nameg32" component={nameg32} />
+         <RootStack.Screen name="nameg33" component={nameg33} />
+         <RootStack.Screen name="nameg34" component={nameg34} />
+         <RootStack.Screen name="nameg35" component={nameg35} />
+         <RootStack.Screen name="nameg36" component={nameg36} />
+         <RootStack.Screen name="nameg40" component={nameg40} />
+         <RootStack.Screen name="nameg41" component={nameg41} />
+         <RootStack.Screen name="nameg42" component={nameg42} />
+         <RootStack.Screen name="nameg43" component={nameg43} />
+         <RootStack.Screen name="nameg44" component={nameg44} />
+         <RootStack.Screen name="nameg45" component={nameg45} />
+         <RootStack.Screen name="nameg46" component={nameg46} />
+         <RootStack.Screen name="nameg50" component={nameg50} />
+         <RootStack.Screen name="nameg51" component={nameg51} />
+         <RootStack.Screen name="nameg52" component={nameg52} />
+         <RootStack.Screen name="nameg53" component={nameg53} />
+         <RootStack.Screen name="nameg54" component={nameg54} />
+         <RootStack.Screen name="nameg55" component={nameg55} />
+         <RootStack.Screen name="nameg" component={nameg} />
+      </RootStack.Navigator>
+    </NavigationContainer>
+  );
+};
+export default App;

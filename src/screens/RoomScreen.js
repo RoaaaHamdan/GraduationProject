@@ -1,0 +1,1 @@
+import GiftedChat from 'react-native-gifted-chat'

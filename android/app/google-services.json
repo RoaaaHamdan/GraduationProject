@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "36947740905",
+    "firebase_url": "https://allodoctor-aea81.firebaseio.com",
+    "project_id": "allodoctor-aea81",
+    "storage_bucket": "allodoctor-aea81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36947740905:android:e0a0dfaee33a30805f8878",
+        "android_client_info": {
+          "package_name": "com.allodoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36947740905-cmp5oiu7ehoptgshvublcuhif34g90ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDepnnef92uceMjQfyzkx7PLsGc0KxbZgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36947740905-cmp5oiu7ehoptgshvublcuhif34g90ak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

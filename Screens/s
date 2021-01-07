@@ -1,0 +1,129 @@
+
+import { fromBase64 } from "js-base64";
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import firebaseSvc from './privateFire';
+import { GiftedChat } from 'react-native-gifted-chat';
+import fire from './fire';
+import { Divider, Button,Header,CheckBox } from 'react-native-elements';
+
+
+global.h='';
+export default class chatf extends Component {
+    constructor(props) {
+        super(props);
+        this.array = [];
+
+    }
+
+    state = {
+        messages: [],
+    };
+
+
+    componentDidMount() {
+        const chatee=global.user2; //receiver email //id
+        const chater= global.firstName +" "+ global.lastName;
+
+        this.array = [];
+        firebaseSvc.refOn(chatee,(message =>
+            this.setState(previousState => ({
+                messages: GiftedChat.append(previousState.messages, message),
+            })))
+        );
+    }
+
+
+    componentWillUnmount() {
+        firebaseSvc.refOff();
+
+    }
+    
+
+    get user() {
+    //    const {f_name , l_name, email}= this.props.route.params;
+        const chatee=global.username; //receiver email //id
+        const chater= global.firstName +" "+ global.lastName;
+ h=chater;
+     if(chater!=0){
+          // Return our name and our UID for GiftedChat to parse
+          return {
+              name:global.username,
+              user1:global.username, 
+              user2:global.user2,   
+              _id:global.user2 ,
+              
+          };
+     }
+  else{
+      return {
+          name:null,
+          user1:null,
+          user2:null,
+  
+          _id: null,
+      };
+  
+  }
+      }
+
+    render() {
+        var y=0;
+        for(y;y<this.state.messages.length;y++){
+      if(this.state.messages[y].text==undefined){
+        this.state.messages.splice(y, 1);
+  
+      }
+     
+      }
+        return (
+            <View style={{flex:1}}>
+            <Header
+             backgroundColor='#708090'
+     centerComponent={{ text: h, style: { color: '#fff',fontSize:20,fontWeight:'bold' } }}
+     
+     // leftComponent={{ icon:'chevron-left', color: '#fff',onPress:()=>this.props.navigation.navigate('beforeChat')}}
+     
+     />
+
+            <GiftedChat
+
+                messages={this.state.messages}
+               onSend={firebaseSvc.send}
+               user={this.user}
+            />
+</View>
+        );//class
+    }//render
+}//class
+
+
+/////////
+
+
+   <TouchableOpacity
+   style={{
+   width:'50%',
+   height:50,
+   backgroundColor:this.state.b1,
+ 
+   marginTop:70,
+   alignSelf:'center',
+   justifyContent:'center',
+   alignItems:'center',
+   borderRadius:100
+   }}
+   onPress={()=>  this.props.navigation.navigate('CalBabyWei',{date:this.state.date,gender:this.state.gen})   
+                  }
+   >
+
+<Text
+style={{
+  color:'white',
+  fontSize:20,
+  fontFamily:'Amiri-Italic'
+}}
+>
+ قارني  بالوزن الطبيعي!
+</Text>
+   </TouchableOpacity>
